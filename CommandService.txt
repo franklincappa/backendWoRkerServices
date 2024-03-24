@@ -1,0 +1,2 @@
+SC CREATE "WSUserService" binpath= "C:\temp\logs\WSUserUpdate.exe"
+SC DELETE "WSUserService" 

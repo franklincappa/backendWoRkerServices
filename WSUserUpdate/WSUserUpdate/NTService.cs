@@ -14,7 +14,7 @@ namespace WSUserUpdate
         private readonly string connectionstring;
         public NTService(IConfiguration configuration)
         {
-            this.connectionstring = configuration.GetConnectionString("dbconecction");
+            this.connectionstring = configuration.GetConnectionString("dbconection");
         }
         public string updateuser()
         {

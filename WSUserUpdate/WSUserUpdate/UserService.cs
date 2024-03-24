@@ -9,9 +9,11 @@ namespace WSUserUpdate
     public class UserService : BackgroundService
     {
         private readonly ILogger<UserService> _logger;
-        public UserService(ILogger<UserService> logger)
+        private readonly INTService _intService;
+        public UserService(ILogger<UserService> logger, INTService intService)
         {
             _logger = logger;
+            _intService = intService;
         }
 
         protected override async Task ExecuteAsync(CancellationToken stoppingToken)
@@ -21,9 +23,8 @@ namespace WSUserUpdate
                 _logger.LogInformation("Executin started");
                 try
                 {
-                    int data1 = 10;
-                    int data2 = 0;
-                    var final = data1 / data2;
+                    string resp = _intService.updateuser();
+                    _logger.LogInformation(resp+" records updated");
                 }
                 catch(Exception ex) 
                 {
