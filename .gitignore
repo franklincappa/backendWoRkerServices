@@ -131,3 +131,5 @@ $RECYCLE.BIN/
 .DS_Store
 
 _NCrunch*
+*.vsidx
+/WSUserUpdate/.vs/WSUserUpdate/FileContentIndex/e6b959dd-cb18-4223-933f-424fa2841aa5.vsidx
