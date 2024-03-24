@@ -5,6 +5,7 @@ IHost host = Host.CreateDefaultBuilder(args)
     .ConfigureServices(services =>
     {
         //services.AddHostedService<Worker>();
+        services.AddSingleton<INTService, NTService>();
         services.AddHostedService<UserService>();
     })
     .UseSerilog()
